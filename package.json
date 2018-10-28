@@ -4,7 +4,6 @@
   "description": "Hotel Booking Basic Node Application",
   "main": "BookRouting.js",
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "fs": "^0.0.1-security",
     "jquery": "^3.3.1",
     "querystring": "^0.2.0",
