@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title></title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 		<style>
 				.container-login100 {
 					width: 100%;  
@@ -104,33 +105,36 @@
 		<center class="wrap-content wrap-login100">
 			<div class="login100-form-title">
 				<H1>Online Hotel Booking</H1>
-				<b>Registration Form</b>         
+				<b>
+					Registration Form
+					<i style="color:#4CAF50" class="fas fa-user-plus"></i>					
+				</b>         
 			</div>
 			<form  name="myform" action="http://localhost:3000/register" method="post" >
 				
 				<table class="label">
 				<tr>
-					<td>UserName:</td>
+					<td>UserName:<i style="color:#4CAF50" class="far fa-user"></i></td>
 					<td><input class="input-text" required type="text" name="username" value="" /></td>
 				</tr>
 				<tr>
-					<td>Password:</td>
+					<td>Password:<i style="color:#4CAF50" class="fas fa-key"></i></td>
 					<td><input class="input-text" required type="password" name="password" value="" /></td>
 				</tr>
 				<tr>
-					<td>Confirm Password:</td>
+					<td>Confirm Password:<i style="color:#4CAF50" class="fas fa-lock"></i></td>
 					<td><input class="input-text" required type="password" name="confirmpassword" value="" /></td>
 				</tr>
 				<tr>
-					<td>Address:</td>
+					<td>Address:<i style="color:#4CAF50" class="fas fa-address-card"></i></td>
 					<td><input class="input-text" required type="text" name="address" value="" /></td>
 				</tr>
 				<tr>
-					<td>Phone No:</td>
+					<td>Phone No:<i style="color:#4CAF50" class="fas fa-mobile-alt"></i></td>
 					<td><input class="input-text" required type="number" pattern="[789][0-9]{9}" name="phoneno" value="" /></td>
 				</tr>
 				<tr>
-					<td>Email:</td>
+					<td>Email:<i  style="color:#4CAF50" class="fas fa-envelope-open"></i></td>
 					<td><input id="email" class="input-text" required type="email" name="email" value="" /></td>
 				</tr>	
 				<tr>
