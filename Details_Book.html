@@ -1,6 +1,131 @@
 <html>
 	<head>
 		<title></title>
+		<style>
+				.container-login100 {
+					width: 100%;  
+					min-height: 100vh;
+					display: -webkit-box;
+					display: -webkit-flex;
+					display: -moz-box;
+					display: -ms-flexbox;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					align-items: center;
+					padding: 15px;
+					background: #9053c7;
+					background: -webkit-linear-gradient(-180deg, #4dad13, #4181d0);
+					background: -o-linear-gradient(-180deg, #4dad13, #4181d0);
+					background: -moz-linear-gradient(-180deg, #4dad13, #4181d0);
+					background: linear-gradient(-180deg, #4dad13, #4181d0);
+					}
+					.wrap-login100 {
+						margin: 20px;
+						width: max-content;
+						background: #fff;
+						border-radius: 10px;
+						overflow: hidden;
+						display: -webkit-box;
+						display: -webkit-flex;
+						display: -moz-box;
+						display: -ms-flexbox;
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: space-between;
+						padding: 0;
+						padding-top: 0px;
+						padding-right: 0px;
+						padding-bottom: 0px;
+						padding-left: 0px;
+					}
+					.wrap-content{
+						padding:0.3%
+					}
+					.login100-form-title {
+						font-family: Poppins-Bold;
+						font-size: 24px;
+						color: #333333;
+						line-height: 1.2;
+						text-align: center;
+						width: 100%;
+						display: block;
+						padding-bottom: 54px;
+					}
+					.validate-input {
+						position: relative;
+					}
+					.wrap-input100 {
+						position: relative;
+						width: 100%;
+						z-index: 1;
+						margin-bottom: 10px;
+					}
+					.input-text {
+						font-family: Poppins-Bold;
+						font-size: 20px;
+						width: 100%;
+						padding: 12px 20px;
+						margin: 8px 0;
+						display: inline-block;
+						border: 1px solid #ccc;
+						border-radius: 20px;
+						box-sizing: border-box;				
+					}
+					.btn {
+						font-family: Poppins-Bold;
+						font-size: 20px;
+						width: 100%;
+						background-color: #4CAF50;
+						color: white;
+						padding: 14px 20px;
+						margin: 8px 0;
+						border: none;
+						border-radius: 20px;
+						cursor: pointer;
+					}
+					.btn:hover{
+						background-color: #45a049;
+					}
+					.tbl {
+						margin-left: -7px;
+						border: 4px solid #1C6EA4;
+						background-color: #EEEEEE;
+						width: 100%;
+						border-collapse: collapse;
+						text-align: left;
+						border-radius: 27px;
+						padding-left: 8px;
+					}
+					.table-a{
+						font-family: Poppins-Bold;
+						font-size: 20px;
+						text-align: center;
+						color: #1c6ea4;
+						border-radius: 20px;
+						background: #eeeeee;
+					}
+					.table-header {
+						font-family: Poppins-Bold;
+						font-size: 20px;
+						text-align: center;
+						color: white;
+						border-radius: 20px;
+						padding: 16px;
+						background: #1c6ea4;						
+						padding: 21px;
+					}
+					.table-label {
+						font-family: Poppins-Bold;
+						font-size: 20px;
+						text-align: center;
+						color: #333333;
+						border-radius: 20px;
+						padding: 16px;
+						background: #eeeeee;
+						padding: 21px;
+					}
+				</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 		<script type="text/javascript">
@@ -14,7 +139,6 @@
 					success: function (data) {
 						
 						var table = document.createElement("TABLE");
-						table.border = "1";
 						//  alert(data);
 						var books=data;							
 						var row = table.insertRow(0);
@@ -22,8 +146,8 @@
 							var cell1 = row.insertCell(0);
 							var cell2 = row.insertCell(1);       
 							// Add some text to the new cells:
-							cell1.innerHTML = "<div></div>" ;
-							cell2.innerHTML = "<b><a href='/rooms/booking'>Book a Room</a></b>";	
+							cell1.innerHTML = "<div class='table-label'></div>" ;
+							cell2.innerHTML = "<b><a class='table-a' href='/rooms/booking'>Book a Room</a></b>";	
 						
 						books.forEach(function(book) {
 							
@@ -34,8 +158,8 @@
 							var cell1 = row.insertCell(0);
 							var cell2 = row.insertCell(1);       
 							// Add some text to the new cells:
-							cell1.innerHTML = "<div><span>"+book.xcol+"</span></div>" ;
-							cell2.innerHTML = "<div>"+book.ycol+"/-</div>";				
+							cell1.innerHTML = "<div class='table-label'><span>"+book.xcol+"</span></div>" ;
+							cell2.innerHTML = "<div class='table-label'>"+book.ycol+"/-</div>";				
 						});
 						
 						var row = table.insertRow(0);
@@ -43,8 +167,8 @@
 							var cell1 = row.insertCell(0);
 							var cell2 = row.insertCell(1);       
 							// Add some text to the new cells:
-							cell1.innerHTML = "<div><b><span>Room Type</span></b></div>" ;
-							cell2.innerHTML = "<div><b>Cost Per Night</b></div>";	
+							cell1.innerHTML = "<div class='table-header'><b><span>Room Type</span></b></div>" ;
+							cell2.innerHTML = "<div class='table-header'><b>Cost Per Night</b></div>";	
 						$('#result').append(table);
 					},
 
@@ -58,20 +182,24 @@
 
 		</script>
 	</head>
-
-	<body bgcolor="#E2C2F6">
-		<center>
-		
-		<H1>Online Hotel Booking</H1>
-		<h3>Tariff Details</h3>
-		<table>
-			<tr><td>               
-				<div id="result"></div>               
-			</td></tr>
-		</table>
-
-		</center>
-
+	<body class="container-login100">
+		<div align="left" class="wrap-login100">
+			<center class="wrap-content">
+				<img src="/hotel-tariff.jpg" alt="Hotel-Tariff"/>
+			</center>
+		</div>
+		<div align="right" class="wrap-content wrap-login100">
+			<center>
+				<div class="login100-form-title">
+					<h1>Online Hotel Booking</h1>
+					<br><b>Tariff Details</b>
+				</div>
+				<table>
+					<tr><td>               
+						<div id="result" class="tbl"></div>               
+					</td></tr>
+				</table>
+			</center>		
+		</div>
 	</body>
-
 </html>

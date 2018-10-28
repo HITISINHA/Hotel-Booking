@@ -14,25 +14,87 @@
 			align-items: center;
 			padding: 15px;
 			background: #9053c7;
-			background: -webkit-linear-gradient(-135deg, #4dad13, #4181d0);
-			background: -o-linear-gradient(-135deg, #4dad13, #4181d0);
-			background: -moz-linear-gradient(-135deg, #4dad13, #4181d0);
-			background: linear-gradient(-135deg, #4dad13, #4181d0);
+			background: -webkit-linear-gradient(-180deg, #4dad13, #4181d0);
+			background: -o-linear-gradient(-180deg, #4dad13, #4181d0);
+			background: -moz-linear-gradient(-180deg, #4dad13, #4181d0);
+			background: linear-gradient(-180deg, #4dad13, #4181d0);
 			}
 			.wrap-login100 {
-			width: 50%;
-			background: #fff;
-			border-radius: 10px;
-			overflow: hidden;
-
-			display: -webkit-box;
-			display: -webkit-flex;
-			display: -moz-box;
-			display: -ms-flexbox;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			padding: 177px 130px 33px 95px;
+				margin: 20px;
+				width: max-content;
+				background: #fff;
+				border-radius: 10px;
+				overflow: hidden;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				padding: 0;
+				padding-top: 0px;
+				padding-right: 0px;
+				padding-bottom: 0px;
+				padding-left: 0px;
+			}
+			.wrap-content{
+				padding:0.3%
+			}
+			.login100-form-title {
+				font-family: Poppins-Bold;
+				font-size: 24px;
+				color: #333333;
+				line-height: 1.2;
+				text-align: center;
+				width: 100%;
+				display: block;
+				padding-bottom: 54px;
+			}
+			.validate-input {
+				position: relative;
+			}
+			.wrap-input100 {
+				position: relative;
+				width: 100%;
+				z-index: 1;
+				margin-bottom: 10px;
+			}
+			.input-text {
+				font-family: Poppins-Bold;
+    			font-size: 20px;
+				width: 100%;
+				padding: 12px 20px;
+				margin: 8px 0;
+				display: inline-block;
+				border: 1px solid #ccc;
+				border-radius: 20px;
+				box-sizing: border-box;				
+			}
+			.btn {
+				font-family: Poppins-Bold;
+    			font-size: 20px;
+				width: 100%;
+				background-color: #4CAF50;
+				color: white;
+				padding: 14px 20px;
+				margin: 8px 0;
+				border: none;
+				border-radius: 20px;
+				cursor: pointer;
+			}
+			.btn:hover{
+				background-color: #45a049;
+			}
+			.label {
+				font-family: Poppins-Bold;
+				font-size: 20px;
+				color: #333333;
+				line-height: 1.2;
+				width: 100%;
+				display: block;
+				padding-bottom: 54px;
+				padding-left: 22px;
 			}
 		</style>
 		<title></title>
@@ -56,31 +118,33 @@
 	
 	<body class="container-login100">
 		<div align="left" class="wrap-login100">
-			<center>
+			<center class="wrap-content">
 				<img src="/hotel-login.jpg" alt="Hotel-Login"/>
 			</center>
 		</div>
-		<div align="right" class="wrap-login100">
+		<div align="right" class="wrap-content wrap-login100">
 			<center>
-				<h1>Online Hotel Booking</h1>
-				<h5>Login to view Hotel details</h5>
+				<div class="login100-form-title">
+					<h1>Online Hotel Booking</h1>
+					<br><b>Login to view Hotel details</b>
+				</div>
 				<form  name="myform" method="post" >
-					<table>
+					<table class="label">
 					<tr>
-						<td>UserName:</td>
-						<td><input type="text" name="username" value="" /></td>
+						<td> UserName:</td>
+						<td><input class="input-text" type="text" name="username" value="" /></td>
 					</tr>
 					
 					<tr>
 						<td>Password:</td>
-						<td><input type="password" name="password" value="" /></td>
+						<td><input class="input-text" type="password" name="password" value="" /></td>
 					</tr>
 					
 					<tr>
 						<td></td>
 						<td>
-							<input type="button" onclick="OnSubmitForm(this.value);" value="Login" />
-							<input type="button" onclick="OnSubmitForm(this.value);" value="Signup" />
+							<input class="btn" type="button" onclick="OnSubmitForm(this.value);" value="Login" />
+							<input class="btn" type="button" onclick="OnSubmitForm(this.value);" value="Signup" />
 						</td>
 					</tr>
 					</table>

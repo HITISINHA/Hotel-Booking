@@ -1,43 +1,141 @@
 <html>
 	<head>
 		<title></title>
+		<style>
+				.container-login100 {
+					width: 100%;  
+					min-height: 100vh;
+					display: -webkit-box;
+					display: -webkit-flex;
+					display: -moz-box;
+					display: -ms-flexbox;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					align-items: center;
+					padding: 15px;
+					background: #9053c7;
+					background: -webkit-linear-gradient(-180deg, #4dad13, #4181d0);
+					background: -o-linear-gradient(-180deg, #4dad13, #4181d0);
+					background: -moz-linear-gradient(-180deg, #4dad13, #4181d0);
+					background: linear-gradient(-180deg, #4dad13, #4181d0);
+					}
+					.wrap-login100 {
+						margin: 20px;
+						width: max-content;
+						background: #fff;
+						border-radius: 10px;
+						overflow: hidden;
+						display: -webkit-box;
+						display: -webkit-flex;
+						display: -moz-box;
+						display: -ms-flexbox;
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: space-between;
+						padding: 0;
+						padding-top: 0px;
+						padding-right: 0px;
+						padding-bottom: 0px;
+						padding-left: 0px;
+					}
+					.wrap-content{
+						padding:0.3%
+					}
+					.login100-form-title {
+						font-family: Poppins-Bold;
+						font-size: 24px;
+						color: #333333;
+						line-height: 1.2;
+						text-align: center;
+						width: 100%;
+						display: block;
+						padding-bottom: 54px;
+					}
+					.validate-input {
+						position: relative;
+					}
+					.wrap-input100 {
+						position: relative;
+						width: 100%;
+						z-index: 1;
+						margin-bottom: 10px;
+					}
+					.input-text {
+						font-family: Poppins-Bold;
+						font-size: 20px;
+						width: 100%;
+						padding: 12px 20px;
+						margin: 8px 0;
+						display: inline-block;
+						border: 1px solid #ccc;
+						border-radius: 20px;
+						box-sizing: border-box;				
+					}
+					.btn {
+						font-family: Poppins-Bold;
+						font-size: 20px;
+						width: 100%;
+						background-color: #4CAF50;
+						color: white;
+						padding: 14px 20px;
+						margin: 8px 0;
+						border: none;
+						border-radius: 20px;
+						cursor: pointer;
+					}
+					.btn:hover{
+						background-color: #45a049;
+					}
+					.label {
+						font-family: Poppins-Bold;
+						font-size: 20px;
+						color: #333333;
+						line-height: 1.2;
+						width: 100%;
+						display: block;
+						padding-bottom: 54px;
+						padding-left: 22px;
+					}
+				</style>
 	</head>
 	
-	<body bgcolor="#E2C2F6">
-		<center>
-			<H1>Online Hotel Booking</H1>
-			<h4>Registration Form</h4>         
-
+	<body class="container-login100">
+		<center class="wrap-content wrap-login100">
+			<div class="login100-form-title">
+				<H1>Online Hotel Booking</H1>
+				<b>Registration Form</b>         
+			</div>
 			<form  name="myform" action="http://localhost:3000/register" method="post" >
 				
-				<table>
+				<table class="label">
 				<tr>
 					<td>UserName:</td>
-					<td><input type="text" name="username" value="" /></td>
+					<td><input class="input-text" required type="text" name="username" value="" /></td>
 				</tr>
 				<tr>
 					<td>Password:</td>
-					<td><input type="password" name="password" value="" /></td>
+					<td><input class="input-text" required type="password" name="password" value="" /></td>
 				</tr>
 				<tr>
 					<td>Confirm Password:</td>
-					<td><input type="password" name="confirmpassword" value="" /></td>
+					<td><input class="input-text" required type="password" name="confirmpassword" value="" /></td>
 				</tr>
 				<tr>
 					<td>Address:</td>
-					<td><input type="text" name="address" value="" /></td>
+					<td><input class="input-text" required type="text" name="address" value="" /></td>
 				</tr>
 				<tr>
 					<td>Phone No:</td>
-					<td><input type="number" name="phoneno" value="" /></td>
+					<td><input class="input-text" required type="number" pattern="[789][0-9]{9}" name="phoneno" value="" /></td>
 				</tr>
 				<tr>
 					<td>Email:</td>
-					<td><input type="text" name="email" value="" /></td>
+					<td><input id="email" class="input-text" required type="email" name="email" value="" /></td>
 				</tr>	
 				<tr>
 					<td></td>
-					<td><input type="submit"  value="Register" /></td>
+					<td><input class="btn" type="submit"  value="Register" /></td>
 				</tr>                           
 				</table>
 				
