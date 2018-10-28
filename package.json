@@ -1,0 +1,28 @@
+{
+  "name": "hotel-booking",
+  "version": "1.0.0",
+  "description": "Hotel Booking Basic Node Application",
+  "main": "BookRouting.js",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "fs": "^0.0.1-security",
+    "jquery": "^3.3.1",
+    "querystring": "^0.2.0",
+    "url": "^0.11.0",
+    "zlib": "^1.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HITISINHA/Hotel-Booking.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HITISINHA/Hotel-Booking/issues"
+  },
+  "homepage": "https://github.com/HITISINHA/Hotel-Booking#readme"
+}
