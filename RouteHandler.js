@@ -43,8 +43,8 @@ exports.display_login=function(url, request, response){
 					console.log("error");
 					//response.end("Invalid User");
 					response.writeHead(200, {'Content-Type': 'text/html'});
-					response.write("<body bgcolor='#E2C2F6'><center class='wrap-content wrap-login100'>Invalid User try login Again!!</center></body>");
-					response.write("<center class='wrap-content wrap-login100'><a href='home'>Back to Login</a></center>");
+					response.write(" <head><title></title><style>.container-login100{width: 100%; min-height: 100vh;display: -webkit-box;display: -webkit-flex;display: -moz-box;display: -ms-flexbox;display: flex;flex-wrap: wrap;justify-content: center;align-items: center;padding: 15px;background: #9053c7;background: -webkit-linear-gradient(-180deg, #4dad13, #4181d0);background: -o-linear-gradient(-180deg, #4dad13, #4181d0);background: -moz-linear-gradient(-180deg, #4dad13, #4181d0);background: linear-gradient(-180deg, #4dad13, #4181d0);}.wrap-login100{margin: 20px;width: max-content;background:none;border-radius: 10px;overflow: hidden;display: -webkit-box;display: -webkit-flex;display: -moz-box;display: -ms-flexbox;display: flex;flex-wrap: wrap;justify-content: space-between;padding: 0;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}.wrap-content{padding:0.3%}.login100-form-title{font-family: Poppins-Bold;font-size: 24px;color: #ffffff;line-height: 1.2;text-align: center;width: 100%;display: block;padding-bottom: 54px;}.label{font-family: Poppins-Bold;font-size: 20px;color: #333333;line-height: 1.2;width: 100%;display: block;padding-bottom: 54px;padding-left: 22px;}</style> </head><body class='container-login100'><center class='wrap-content wrap-login100'><div class='login100-form-title'>Invalid User try login Again!!");
+					response.write("<br><a href='home'>Back to Login</a></div></center></body>");
 					response.end();
 				}            
 
