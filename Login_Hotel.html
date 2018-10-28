@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<style>
+		.container-login100 {
+			width: 100%;  
+			min-height: 100vh;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			padding: 15px;
+			background: #9053c7;
+			background: -webkit-linear-gradient(-135deg, #4dad13, #4181d0);
+			background: -o-linear-gradient(-135deg, #4dad13, #4181d0);
+			background: -moz-linear-gradient(-135deg, #4dad13, #4181d0);
+			background: linear-gradient(-135deg, #4dad13, #4181d0);
+			}
+			.wrap-login100 {
+			width: 50%;
+			background: #fff;
+			border-radius: 10px;
+			overflow: hidden;
+
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding: 177px 130px 33px 95px;
+			}
+		</style>
+		<title></title>
+		<script type="text/javascript">
+			function OnSubmitForm(value)
+			{
+				if(value == 'Login')
+				{
+					document.myform.action ="http://localhost:3000/login";
+					document.myform.submit();
+				}
+				
+				else if(value == 'Signup')
+				{
+					document.myform.action ="http://localhost:3000/signup";
+					document.myform.submit();
+				}
+			}
+		</script>
+	</head>
+	
+	<body class="container-login100">
+		<div align="left" class="wrap-login100">
+			<center>
+				<img src="/hotel-login.jpg" alt="Hotel-Login"/>
+			</center>
+		</div>
+		<div align="right" class="wrap-login100">
+			<center>
+				<h1>Online Hotel Booking</h1>
+				<h5>Login to view Hotel details</h5>
+				<form  name="myform" method="post" >
+					<table>
+					<tr>
+						<td>UserName:</td>
+						<td><input type="text" name="username" value="" /></td>
+					</tr>
+					
+					<tr>
+						<td>Password:</td>
+						<td><input type="password" name="password" value="" /></td>
+					</tr>
+					
+					<tr>
+						<td></td>
+						<td>
+							<input type="button" onclick="OnSubmitForm(this.value);" value="Login" />
+							<input type="button" onclick="OnSubmitForm(this.value);" value="Signup" />
+						</td>
+					</tr>
+					</table>
+				</form>
+			</center>		
+		</div>
+	</body>
+</html>

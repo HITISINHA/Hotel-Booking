@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	
+	<body bgcolor="#E2C2F6">
+		<center>
+			<H1>Online Hotel Booking</H1>
+			<h4>Room Booking</h4>         
+
+			<form  name="myform" action="http://localhost:3000/bookroom" method="post" >
+				
+				<table>
+				<tr>
+					<td>No. of Adults:</td>
+					<td>
+                        <select name="adults" value="">
+                                <option value="" disabled >--Select--</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                        </select>
+                    </td>
+				</tr>
+				<tr>
+					<td>No. of Children:</td>
+					<td>
+                        <select name="children" value="">
+                                <option value="" disabled >--Select--</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                        </select>
+                    </td>
+				</tr>
+				<tr>
+					<td>Type of Room:</td>
+					<td>
+                            <select name="roomtype" value="">
+                                    <option value="" disabled >--Select--</option>
+                                    <option value="Double Room AC">Double Room A/C</option>
+                                    <option value="Single Room AC">Single Room A/C</option>
+                                    <option value="Double Room Non AC">Double Room Non A/C</option>
+                                    <option value="Single Room Non AC">Single Room Non A/C</option>
+                            </select>
+                        </td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td><input type="submit"  value="Book" /></td>
+				</tr>                           
+				</table>
+				
+			</form>
+		</center>
+	</body>
+</html>

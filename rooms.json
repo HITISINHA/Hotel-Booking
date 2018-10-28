@@ -1,0 +1,20 @@
+[
+  {
+    "xcol": "Double Room A/C",
+    "ycol": "Rs.2000",
+    "imgURL":"/node1.jpg"
+  },
+  {
+    "xcol": "Single Room A/C",
+    "ycol": "Rs.1500"
+  },
+  {
+    "xcol": "Double Room Non A/C",
+    "ycol": "Rs.1200"
+  },
+  {
+    "xcol": "Single Room Non A/C",
+    "ycol": "Rs.800"
+  }
+]
+ 
